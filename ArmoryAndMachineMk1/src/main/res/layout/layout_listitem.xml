@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:id="@+id/parent_layout">
+
+    <FrameLayout
+        android:id="@+id/frameBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF" />
+
+    <Button
+            android:id="@+id/plus"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#BCBCBC"
+            android:onClick="onClick"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/minus"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/plus"
+            android:backgroundTint="#BCBCBC"
+            android:onClick="onClick"
+            android:text="-" />
+
+        <View
+            android:id="@+id/black"
+            android:layout_width="40dp"
+            android:layout_height="38dp"
+            android:layout_toRightOf="@id/minus"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="6dp"
+            android:background="#373737" />
+
+    <ImageView
+            android:id="@+id/wrench"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@id/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="6dp"
+            android:src="@android:drawable/ic_menu_manage" />
+
+        <TextView
+            android:id="@+id/workerNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/workerNumDash"
+            android:layout_marginTop="30dp"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/workerNumDash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="30dp"
+            android:text="/"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/workerNumTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/workerNumDash"
+            android:layout_marginTop="30dp"
+            android:text="22"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/constraint"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@id/disableAutomation"
+        android:layout_alignBottom="@id/plus"
+        android:layout_toEndOf="@id/black">
+
+        <View
+            android:id="@+id/blackBar"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:layout_marginStart="7.5dp"
+            android:layout_marginTop="13.5dp"
+            android:layout_marginEnd="7.5dp"
+            android:background="#373737"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/heatBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:background="#000000"
+            android:max="100"
+            android:progress="0"
+            android:progressBackgroundTint="#000000"
+            android:progressTint="#FFFFFF"
+            android:scaleY="3"
+            android:scrollbarSize="300dp"
+            app:layout_constraintEnd_toStartOf="@+id/blackBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heat"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+            android:id="@+id/disableAutomation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Disable \n Automation"
+            android:textSize="8sp" />
+
+</RelativeLayout>

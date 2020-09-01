@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Software Company Inc</string>
+    <string name="title_craft">CRAFT</string>
+    <string name="title_research">RESEARCH</string>
+    <string name="title_log">LOG</string>
+    <string name="title_jobs">JOBS</string>
+    <string name="workers">0</string>
+    <string name="latestTimeKey">latestTime</string>
+    <string name="latestHeatKey">latestHeatValue</string>
+    <string name="latestTankKey">latestTankValue</string>
+    <string name="latestKilnKey">latestKilnValue</string>
+    <string name="latestFluidKey">latestFluidValue</string>
+    <string name="companyName">Company Name</string>
+
+</resources>

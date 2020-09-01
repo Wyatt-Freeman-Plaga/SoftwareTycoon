@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:id="@+id/parent_layout">
+
+    <TextView
+        android:id="@+id/resorceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Back-End"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/red"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/plus"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_below="@id/resorceTitle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="onClick"
+        android:text="+" />
+        <!--android:backgroundTint="#9C1111"-->
+
+    <Button
+        android:id="@+id/minus"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_below="@id/resorceTitle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/plus"
+        android:backgroundTint="#000000"
+        android:textColor="@color/white"
+        android:onClick="onClick"
+        android:text="-" />
+
+    <!--android:backgroundTint="#197ECF"-->
+
+        <View
+            android:id="@+id/black"
+            android:layout_below="@id/resorceTitle"
+            android:layout_width="40dp"
+            android:layout_height="38dp"
+            android:layout_toRightOf="@id/minus"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="6dp"
+            android:background="#373737" />
+
+    <ImageView
+            android:id="@+id/wrench"
+        android:layout_below="@id/resorceTitle"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignStart="@id/black"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="8dp"
+            android:src="@android:drawable/ic_menu_manage" />
+
+    <TextView
+        android:id="@+id/workers"
+        android:layout_below="@id/resorceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_alignStart="@id/black"
+        android:layout_alignEnd="@id/black"
+        android:textAlignment="center"
+        android:text="0/1"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/resorceTitle"
+        android:layout_alignBottom="@id/plus"
+        android:layout_toStartOf="@id/buyWorker"
+        android:layout_toEndOf="@id/black">
+
+        <View
+            android:id="@+id/blackBar"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="11.5dp"
+            android:layout_marginEnd="6dp"
+            android:background="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/resource"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:max="100"
+            android:progress="0"
+            android:progressBackgroundTint="#000000"
+            android:progressTint="#FFFFFF"
+            android:scaleY="3"
+            android:scrollbarSize="300dp"
+            app:layout_constraintBottom_toTopOf="@id/resource"
+            app:layout_constraintEnd_toStartOf="@id/resource"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7.5dp"
+            android:layout_marginBottom="2dp"
+            android:text="Heat: 0/20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buyWorker"
+        android:layout_below="@id/resorceTitle"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Buy\nWorker" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/backendTools"
+        android:layout_below="@id/plus">
+
+        <Button
+            android:id="@+id/tool1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tool2"
+            android:text="Code Cleanup" />
+
+        <Button
+            android:id="@+id/tool2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@id/tool1"
+            app:layout_constraintEnd_toStartOf="@id/tool3"
+            android:text="Debugging" />
+
+        <Button
+            android:id="@+id/tool3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@id/tool2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="13dp"
+            android:text="Custom Engine" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

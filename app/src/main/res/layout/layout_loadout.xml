@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/moveName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Move Name" />
+
+    <Button
+        android:id="@+id/addMoveToLoadout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Equip Move" />
+
+    <TextView
+        android:id="@+id/moveType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/moveName"
+        android:layout_marginEnd="10dp"
+        android:text="Type" />
+
+    <TextView
+        android:id="@+id/moveTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/moveType"
+        android:layout_below="@id/moveName"
+        android:layout_marginEnd="10dp"
+        android:text="Execute Time" />
+
+    <TextView
+        android:id="@+id/moveDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/moveTime"
+        android:layout_below="@id/moveName"
+        android:text="Damage" />
+
+</RelativeLayout>

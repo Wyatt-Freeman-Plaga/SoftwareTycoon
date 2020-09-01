@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_craft"
+        android:title="@string/title_craft" />
+
+    <item
+        android:id="@+id/navigation_research"
+        android:title="@string/title_research" />
+
+    <item
+        android:id="@+id/navigation_log"
+        android:icon="@drawable/log_icon"
+        android:title="@string/title_log" />
+
+    <item
+        android:id="@+id/navigation_jobs"
+        android:icon="@drawable/jobs_icon"
+        android:title="@string/title_jobs" />
+
+</menu>

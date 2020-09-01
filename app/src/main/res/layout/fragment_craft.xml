@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.craft.CraftFragment">
+
+    <TextView
+        android:id="@+id/text_craft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/backendTools"
+        android:layout_below="@id/recycler_view">
+
+        <TextView
+            android:id="@+id/resorceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Back-End"
+            android:textColor="@color/red"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/backendTool1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/resorceTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/backendTool2"
+            android:text="Code Cleanup" />
+
+        <Button
+            android:id="@+id/backendTool2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/resorceTitle"
+            app:layout_constraintStart_toEndOf="@id/backendTool1"
+            app:layout_constraintEnd_toStartOf="@id/backendTool3"
+            android:text="Debugging" />
+
+        <Button
+            android:id="@+id/backendTool3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/resorceTitle"
+            app:layout_constraintStart_toEndOf="@id/backendTool2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="13dp"
+            android:text="Custom Engine" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/frontendTools"
+        android:layout_below="@id/backendTools">
+
+        <TextView
+            android:id="@+id/frontendToolsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Front-End"
+            android:textColor="@color/yellow"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/frontendTool1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/frontendToolsTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/frontendTool2"
+            android:text="Tool 1" />
+
+        <Button
+            android:id="@+id/frontendTool2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/frontendToolsTitle"
+            app:layout_constraintStart_toEndOf="@id/frontendTool1"
+            app:layout_constraintEnd_toStartOf="@id/frontendTool3"
+            android:text="Tool 2" />
+
+        <Button
+            android:id="@+id/frontendTool3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/frontendToolsTitle"
+            app:layout_constraintStart_toEndOf="@id/frontendTool2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Tool 3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/designTools"
+        android:layout_below="@id/frontendTools">
+
+        <TextView
+            android:id="@+id/designToolsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Design"
+            android:textColor="@color/blue"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/designTool1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/designToolsTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/designTool2"
+            android:textSize="13dp"
+            android:text="Custom Images" />
+
+        <Button
+            android:id="@+id/designTool2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/designToolsTitle"
+            app:layout_constraintStart_toEndOf="@id/designTool1"
+            app:layout_constraintEnd_toStartOf="@id/designTool3"
+            android:textSize="12dp"
+            android:text="Custom Sounds" />
+
+        <Button
+            android:id="@+id/designTool3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/designToolsTitle"
+            app:layout_constraintStart_toEndOf="@id/designTool2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="3D Modeling" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/salesTools"
+        android:layout_below="@id/designTools">
+
+        <TextView
+            android:id="@+id/salesToolsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Sales"
+            android:textColor="@color/purple"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/salesTool1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/salesToolsTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/salesTool2"
+            android:text="Micro-\nTransactions" />
+
+        <Button
+            android:id="@+id/salesTool2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/salesToolsTitle"
+            app:layout_constraintStart_toEndOf="@id/salesTool1"
+            app:layout_constraintEnd_toStartOf="@id/salesTool3"
+            android:text="Ad\nCampaign" />
+
+        <Button
+            android:id="@+id/salesTool3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/salesToolsTitle"
+            app:layout_constraintStart_toEndOf="@id/salesTool2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Celebrity Sponsorship" />
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</RelativeLayout>

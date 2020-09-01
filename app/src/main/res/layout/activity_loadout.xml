@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/loadoutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:text="LOADOUT" />
+
+
+    <Button
+        android:id="@+id/slot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loadoutTitle"
+        android:layout_toLeftOf="@id/middle"
+        android:onClick="executeMove1"
+        android:text="Slot 1" />
+
+    <Button
+        android:id="@+id/slot2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loadoutTitle"
+        android:layout_toEndOf="@id/slot1"
+        android:onClick="executeMove2"
+        android:text="Slot 2" />
+
+    <Button
+        android:id="@+id/slot3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/slot1"
+        android:layout_toLeftOf="@id/middle"
+        android:onClick="executeMove3"
+        android:text="Slot 3" />
+
+    <Button
+        android:id="@+id/slot4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/slot1"
+        android:layout_toEndOf="@id/slot3"
+        android:onClick="executeMove4"
+        android:text="Slot 4" />
+
+    <TextView
+        android:id="@+id/middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/loadoutRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/slot3"/>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/jobTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="25dp"
+        android:text="Job Title" />
+
+    <TextView
+        android:id="@+id/restiance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jobTitle"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="4dp"
+        android:text="Res: " />
+
+    <TextView
+        android:id="@+id/vulnerability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jobTitle"
+        android:layout_toRightOf="@id/resistanceType"
+        android:layout_marginTop="5dp"
+        android:text=", Vul: " />
+
+    <TextView
+        android:id="@+id/resistanceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/restiance"
+        android:layout_alignTop="@id/restiance"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/vulnerabilityType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/vulnerability"
+        android:layout_alignTop="@id/vulnerability"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/reward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/vulnerabilityType"
+        android:layout_alignTop="@id/restiance"
+        android:text=", Reward: 10 gems" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:layout_marginRight="10dp"
+        android:text="Begin" />
+</RelativeLayout>

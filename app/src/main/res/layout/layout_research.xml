@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp">
+
+    <TextView
+        android:id="@+id/resourceResearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Heat"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/jobSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@id/resourceResearch"
+        android:layout_marginStart="10dp"
+        android:layout_toLeftOf="@id/itemCapacity"
+        android:backgroundTint="#AC0D0D"
+        android:text="Job Speed" />
+
+    <Button
+        android:id="@+id/itemCapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@id/resourceResearch"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FFC107"
+        android:text="Item Capacity" />
+
+    <Button
+        android:id="@+id/workerCapacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@id/resourceResearch"
+        android:layout_marginEnd="10dp"
+        android:layout_toRightOf="@id/itemCapacity"
+        android:backgroundTint="#2196F3"
+        android:text="Worker Capacity"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/jobSpeedNeeded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jobSpeed"
+        android:layout_alignStart="@id/jobSpeed"
+        android:layout_alignEnd="@id/jobSpeed"
+        android:text="Needed: 100 Heat"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/itemCapacityNeeded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itemCapacity"
+        android:layout_alignStart="@id/itemCapacity"
+        android:layout_alignEnd="@id/itemCapacity"
+        android:text="Needed: 200 Heat"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/workerCapscityNeeded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/workerCapacity"
+        android:layout_alignStart="@id/workerCapacity"
+        android:layout_alignEnd="@id/workerCapacity"
+        android:text="Needed: 300 Heat"
+        android:textAlignment="center" />
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ArmoryAndMachine</string>
+    <string name="title_craft">CRAFT</string>
+    <string name="title_research">RESEARCH</string>
+    <string name="title_log">LOG</string>
+    <string name="title_explore">EXPLORE</string>
+    <string name="workers">0</string>
+</resources>
